@@ -37,7 +37,7 @@ const Banner = () => {
           />
           <div className="absolute rounded-xl flex items-center h-full left-0  bottom-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0) 100%)]">
            <div className='text-white space-y-7 w-1/2 pl-12'>
-              <h2 className='text-6xl text-white font-bold  '>Affordable Price For Car Servicing</h2>
+              <h2 className='text-6xl text-white font-bold  '>WELCOME TO BEST FOOTBALL ACADEMY</h2>
               <p>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
               <div >
               <button className="btn btn-primary font-semibold mr-5">Discover More</button>
@@ -61,7 +61,7 @@ const Banner = () => {
           />
           <div className="absolute rounded-xl flex items-center h-full left-0  bottom-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0) 100%)]">
            <div className='text-white space-y-7 w-1/2 pl-12'>
-              <h2 className='text-6xl text-white font-bold  '>Affordable Price For Car Servicing</h2>
+              <h2 className='text-6xl text-white font-bold  '>WELCOME TO BEST FOOTBALL ACADEMY</h2>
               <p>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
               <div >
               <button className="btn btn-primary font-semibold mr-5">Discover More</button>
