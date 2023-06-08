@@ -3,6 +3,7 @@ import img from '../../assets/fo1.jpg'
 import { AuthContext } from '../../providers/AuthProvider';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import Google from '../Shared/Google/Google';
 
 const Login = () => {
   const {signIn} = useContext(AuthContext)
@@ -59,6 +60,8 @@ const Login = () => {
               </div>
             </form>
             <p className='text-center font-semibold'><small>Now Here? <Link to='/signup'>Please sign up</Link></small></p>
+           <Google></Google>
+
           </div>
         </div>
       </div>
