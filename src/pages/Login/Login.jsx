@@ -49,7 +49,7 @@ const Login = () => {
                 <input className="btn btn-primary" type="submit" value="Login" />
               </div>
             </form>
-            <p><small>Now Here <Link to='/signup'>Please sign up</Link></small></p>
+            <p className='text-center font-semibold'><small>Now Here? <Link to='/signup'>Please sign up</Link></small></p>
           </div>
         </div>
       </div>
