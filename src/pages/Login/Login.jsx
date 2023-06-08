@@ -1,11 +1,15 @@
 import { useContext } from 'react';
 import img from '../../assets/fo1.jpg'
 import { AuthContext } from '../../providers/AuthProvider';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
-
   const {signIn} = useContext(AuthContext)
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname || "/";
 
     const handleLogin = event => {
         event.preventDefault();
@@ -18,9 +22,14 @@ const Login = () => {
           const user = result.user;
           console.log(user);
         })
+        navigate(from, {replace: true});
     }
 
     return (
+        <>
+      <Helmet>
+         <title>Football Academy | Login</title>
+    </Helmet>
         <div className="hero min-h-screen bg-base-200 ">
         <div className="hero-content flex-col lg:flex-row-reverse ">
           <div className="text-center md:w-1/2 lg:text-left">           
@@ -53,6 +62,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+        </>
     );
 };
 
