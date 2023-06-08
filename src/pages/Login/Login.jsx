@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import img from '../../assets/fo1.jpg'
 import { AuthContext } from '../../providers/AuthProvider';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -9,6 +9,8 @@ const Login = () => {
   const {signIn} = useContext(AuthContext)
   const navigate = useNavigate();
   const location = useLocation();
+
+  const [check, setCheck] = useState()
 
   const from = location.state?.from?.pathname || "/";
 
@@ -33,7 +35,7 @@ const Login = () => {
     </Helmet>
         <div className="hero min-h-screen bg-base-200 ">
         <div className="hero-content flex-col lg:flex-row-reverse ">
-          <div className="text-center md:w-1/2 lg:text-left">           
+          <div className=" md:w-1/2 lg:text-left">           
             <img className='mx-5' src={img} alt="" />
           </div>
           <div className="card md:w-1/2 w-full max-w-sm shadow-2xl bg-base-100">
@@ -49,19 +51,16 @@ const Login = () => {
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input type="password" name='password' placeholder="password" className="input input-bordered" />
-                <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                </label>
+                <input type={check? 'text' : 'password'} name='password' placeholder="password" className="input input-bordered mb-2" />
+                <span><input onChange={() => setCheck(!check)} type="checkbox"  name="" id="" /></span>
               </div>
-              <div className="form-control mt-6">
-                
+              
+              <div className="form-control mt-6">              
                 <input className="btn btn-primary" type="submit" value="Login" />
               </div>
             </form>
             <p className='text-center font-semibold'><small>Now Here? <Link to='/signup'>Please sign up</Link></small></p>
            <Google></Google>
-
           </div>
         </div>
       </div>

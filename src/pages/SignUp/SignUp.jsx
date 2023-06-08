@@ -6,7 +6,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 
 
 const SignUp = () => {
-  const { register, handleSubmit, reset, formState: { errors } } = useForm();
+  const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
 
   const {createUser, updateUserProfile} = useContext(AuthContext)
   const navigate = useNavigate();
@@ -67,16 +67,6 @@ const SignUp = () => {
           <input type="email" name="email" {...register("email" ,{ required: true })} placeholder="email" className="input input-bordered" />
           {errors.email && <span>Email is required</span>}
         </div>
-     
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Confirm Password</span>
-          </label>
-          <input type="password" name="confirm-password" placeholder="confirm password" className="input input-bordered" />
-          <label className="label">
-            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-          </label>
-        </div>
 
         <div className="form-control">
           <label className="label">
@@ -92,9 +82,44 @@ const SignUp = () => {
           {errors.password?.type === 'pattern' && <p role="alert">Password must have 1 upper case 1 lower case 1 number and 1 special characters </p>}
           
           <label className="label">
-            
+            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>
         </div>
+     
+        {/* <div className="form-control">
+          <label className="label">
+            <span className="label-text">Confirm Password</span>
+          </label>
+          <input type="password" name="confirm-password" placeholder="confirm password" className="input input-bordered" />
+        </div> */}
+
+
+<div className='mb-4'>
+					<label
+						className='block text-gray-700 text-sm font-bold mb-2'
+						htmlFor='confirmPassword'>
+						Confirm Password
+					</label>
+					<input
+						className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline ${
+							errors.confirmPassword ? 'border-red-500' : ''
+						}`}
+						type='password'
+						placeholder='Confirm Password'
+						{...register('confirmPassword', {
+							required: 'Please confirm your password',
+							validate: (value) =>
+								value === watch('password') || 'Passwords do not match',
+						})}
+					/>
+					{errors.confirmPassword && (
+						<p className='text-red-500 text-xs mt-1'>
+							{errors.confirmPassword.message}
+						</p>
+					)}
+          </div>
+
+        
         <div className="form-control mt-6">
           <input className="btn btn-primary" type="submit" value="Sign Up" />
         </div>

@@ -1,0 +1,82 @@
+[
+    
+      {
+        "_id": "1",
+        "image": "https://i.ibb.co/q5gLm2w/6.jpg",
+        "name": "Mathematics",
+        "instructor": "John Smith",
+        "available_seats": 20,
+        "price": 150
+      },
+      {
+        "_id": "2",
+        "image": "https://i.ibb.co/NWsPQJT/7.jpg",
+        "name": "English Literature",
+        "instructor": "Jane Doe",
+        "available_seats": 18,
+        "price": 120
+      },
+      {
+        "_id": "3",
+        "image": "https://i.ibb.co/KWFBQ16/14.jpg",
+        "name": "Science",
+        "instructor": "David Johnson",
+        "available_seats": 15,
+        "price": 180
+      },
+      {
+        "_id": "4",
+        "image": "https://i.ibb.co/xSzNqdW/9.jpg",
+        "name": "History",
+        "instructor": "Sarah Wilson",
+        "available_seats": 22,
+        "price": 100
+      },
+      {
+        "_id": "5",
+        "image": "https://i.ibb.co/q7v94Z2/10.jpg",
+        "name": "Computer Science",
+        "instructor": "Michael Brown",
+        "available_seats": 25,
+        "price": 200
+      },
+      {
+        "_id": "6",
+        "image": "https://i.ibb.co/PxtPtb3/fo1.jpg",
+        "name": "Art",
+        "instructor": "Emily Davis",
+        "available_seats": 20,
+        "price": 90,
+        "category": "popular"
+      },
+      {
+        "_id": "7",
+        "image": "https://i.ibb.co/q7v94Z2/10.jpg",
+        "name": "Physical Education",
+        "instructor": "Robert Anderson",
+        "available_seats": 30,
+        "price": 80,
+        "category": "popular"
+      },
+      {
+        "_id": "8",
+        "image": "https://i.ibb.co/9wGF0FP/13.jpg",
+        "name": "Geography",
+        "instructor": "Karen Wilson",
+        "available_seats": 16,
+        "price": 110,
+        "category": "popular"
+      },
+      {
+        "_id": "9",
+        "image": "https://i.ibb.co/yVQ6y3r/11.jpg",
+        "name": "Music",
+        "instructor": "Daniel Thompson",
+        "available_seats": 15,
+        "price": 70,
+        "category": "popular"
+      }
+    
+  
+]
+  
