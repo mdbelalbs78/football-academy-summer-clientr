@@ -6,7 +6,10 @@
         "name": "Mathematics",
         "instructor": "John Smith",
         "available_seats": 20,
-        "price": 150
+        "price": 150,
+        "img": "https://i.ibb.co/FH5Rpw4/coach1.jpg",
+        "instructor_name": "Brian",
+        "director" : "Football Performance Director"
       },
       {
         "_id": "2",
@@ -14,7 +17,10 @@
         "name": "English Literature",
         "instructor": "Jane Doe",
         "available_seats": 18,
-        "price": 120
+        "price": 120,
+        "img": "https://i.ibb.co/mX4J086/coach2.jpg",
+        "instructor_name": "Edward",
+        "director" : "Operations Director"
       },
       {
         "_id": "3",
@@ -22,7 +28,10 @@
         "name": "Science",
         "instructor": "David Johnson",
         "available_seats": 15,
-        "price": 180
+        "price": 180,
+        "img": "https://i.ibb.co/vZzfDzg/coach3.jpg",
+        "instructor_name": "Leo",
+        "director" : "Academy Director"
       },
       {
         "_id": "4",
@@ -30,7 +39,10 @@
         "name": "History",
         "instructor": "Sarah Wilson",
         "available_seats": 22,
-        "price": 100
+        "price": 100,
+        "img": "https://i.ibb.co/X2ZDtmn/coach4.jpg",
+        "instructor_name": "Dimitri",
+        "director" : "Assistant Coach"
       },
       {
         "_id": "5",
@@ -38,7 +50,10 @@
         "name": "Computer Science",
         "instructor": "Michael Brown",
         "available_seats": 25,
-        "price": 200
+        "price": 200,
+        "img": "https://i.ibb.co/YTwNfTb/coach5.jpg",
+        "instructor_name": "Stevan",
+        "director" : "Coach"
       },
       {
         "_id": "6",
@@ -47,34 +62,11 @@
         "instructor": "Emily Davis",
         "available_seats": 20,
         "price": 90,
-        "category": "popular"
-      },
-      {
-        "_id": "7",
-        "image": "https://i.ibb.co/q7v94Z2/10.jpg",
-        "name": "Physical Education",
-        "instructor": "Robert Anderson",
-        "available_seats": 30,
-        "price": 80,
-        "category": "popular"
-      },
-      {
-        "_id": "8",
-        "image": "https://i.ibb.co/9wGF0FP/13.jpg",
-        "name": "Geography",
-        "instructor": "Karen Wilson",
-        "available_seats": 16,
-        "price": 110,
-        "category": "popular"
-      },
-      {
-        "_id": "9",
-        "image": "https://i.ibb.co/yVQ6y3r/11.jpg",
-        "name": "Music",
-        "instructor": "Daniel Thompson",
-        "available_seats": 15,
-        "price": 70,
-        "category": "popular"
+        "category": "popular",
+        "img": "https://i.ibb.co/GPp9pFy/coach6.jpg",
+        "instructor_name": "Abraham",
+        "director" : "Assistant Coach"
+        
       }
     
   

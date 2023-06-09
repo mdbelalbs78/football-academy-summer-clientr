@@ -4,7 +4,7 @@ const PopularItem = ({item}) => {
     return (
        
       
-           <div  >
+           <div >
             
             {/* <div>
             <img className="w-[200px]" src={image} alt="" />
