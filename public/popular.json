@@ -7,6 +7,7 @@
         "instructor": "John Smith",
         "available_seats": 20,
         "price": 150,
+        "students": 70,
         "img": "https://i.ibb.co/FH5Rpw4/coach1.jpg",
         "instructor_name": "Brian",
         "director" : "Football Performance Director"
@@ -18,6 +19,7 @@
         "instructor": "Jane Doe",
         "available_seats": 18,
         "price": 120,
+        "students": 60,
         "img": "https://i.ibb.co/mX4J086/coach2.jpg",
         "instructor_name": "Edward",
         "director" : "Operations Director"
@@ -29,6 +31,7 @@
         "instructor": "David Johnson",
         "available_seats": 15,
         "price": 180,
+        "students": 50,
         "img": "https://i.ibb.co/vZzfDzg/coach3.jpg",
         "instructor_name": "Leo",
         "director" : "Academy Director"
@@ -40,6 +43,7 @@
         "instructor": "Sarah Wilson",
         "available_seats": 22,
         "price": 100,
+        "students": 30,
         "img": "https://i.ibb.co/X2ZDtmn/coach4.jpg",
         "instructor_name": "Dimitri",
         "director" : "Assistant Coach"
@@ -51,6 +55,7 @@
         "instructor": "Michael Brown",
         "available_seats": 25,
         "price": 200,
+        "students": 10,
         "img": "https://i.ibb.co/YTwNfTb/coach5.jpg",
         "instructor_name": "Stevan",
         "director" : "Coach"
@@ -62,6 +67,7 @@
         "instructor": "Emily Davis",
         "available_seats": 20,
         "price": 90,
+        "students": 100,
         "category": "popular",
         "img": "https://i.ibb.co/GPp9pFy/coach6.jpg",
         "instructor_name": "Abraham",

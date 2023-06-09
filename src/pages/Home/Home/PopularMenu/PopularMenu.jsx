@@ -11,7 +11,7 @@ const PopularMenu = () => {
     },[])
     return (
         <div>
-            <h2 className="text-center mt-5 p-3 font-semibold">Popular Classes Section</h2>
+            <h2 className="text-center mt-5 p-5 text-3xl mb-2 font-semibold">Popular Classes Section</h2>
             <div className=" grid md:grid-cols-3 mb-12">
                 
                 {
@@ -23,7 +23,7 @@ const PopularMenu = () => {
             </div>
              
             <div>
-            <h2 className="text-center mt-5 p-3 font-semibold">Popular Classes Section</h2>
+            <h2 className="text-center text-3xl mb-2 mt-5 p-3 font-semibold">Popular Instructors Section</h2>
             <div className=" grid md:grid-cols-3 mb-12">
                 
                 {
@@ -34,6 +34,7 @@ const PopularMenu = () => {
                 }
             </div>
             </div>
+            
         </div>
     );
 };

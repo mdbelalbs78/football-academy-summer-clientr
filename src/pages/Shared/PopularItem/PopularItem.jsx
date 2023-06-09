@@ -1,6 +1,6 @@
 
 const PopularItem = ({item}) => {
-    const {name,image} = item;
+    const {name,image,students} = item;
     return (
        
       
@@ -15,7 +15,7 @@ const PopularItem = ({item}) => {
             <figure><img src={image} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title">Name:{name}</h2>
-            
+                 <p>{students}</p>
             </div>
          </div>
         </div>
