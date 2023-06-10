@@ -1,6 +1,6 @@
 
 const Ins = ({item}) => {
-    const {img,instructor_name,director} = item;
+    const {img,instructor_name,director,email} = item;
 
     return (
         <div className="mt-28">
@@ -9,7 +9,7 @@ const Ins = ({item}) => {
             <div className="card-body">
                 <h2 className="card-title">{instructor_name}</h2>
                 <p>{director}</p>
-            
+                <p>{email}</p>
             </div>
          </div>
         </div>

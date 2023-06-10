@@ -10,7 +10,8 @@
         "students": 70,
         "img": "https://i.ibb.co/FH5Rpw4/coach1.jpg",
         "instructor_name": "Brian",
-        "director" : "Football Performance Director"
+        "director" : "Football Performance Director",
+        "email" : "jane@example.com"
       },
       {
         "_id": "2",
@@ -22,7 +23,8 @@
         "students": 60,
         "img": "https://i.ibb.co/mX4J086/coach2.jpg",
         "instructor_name": "Edward",
-        "director" : "Operations Director"
+        "director" : "Operations Director",
+        "email" : "john@example.com"
       },
       {
         "_id": "3",
@@ -34,7 +36,8 @@
         "students": 50,
         "img": "https://i.ibb.co/vZzfDzg/coach3.jpg",
         "instructor_name": "Leo",
-        "director" : "Academy Director"
+        "director" : "Academy Director",
+        "email" : "mary@example.com"
       },
       {
         "_id": "4",
@@ -46,7 +49,8 @@
         "students": 30,
         "img": "https://i.ibb.co/X2ZDtmn/coach4.jpg",
         "instructor_name": "Dimitri",
-        "director" : "Assistant Coach"
+        "director" : "Assistant Coach",
+        "email" : "john@example.com"
       },
       {
         "_id": "5",
@@ -58,7 +62,8 @@
         "students": 10,
         "img": "https://i.ibb.co/YTwNfTb/coach5.jpg",
         "instructor_name": "Stevan",
-        "director" : "Coach"
+        "director" : "Coach",
+        "email" : "mary@example.com"
       },
       {
         "_id": "6",
@@ -71,7 +76,8 @@
         "category": "popular",
         "img": "https://i.ibb.co/GPp9pFy/coach6.jpg",
         "instructor_name": "Abraham",
-        "director" : "Assistant Coach"
+        "director" : "Assistant Coach",
+        "email" : "jane@example.com"
         
       }
     

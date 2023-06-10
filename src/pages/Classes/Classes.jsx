@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import Ins from "../Ins/Ins";
+import Class from "../Class/Class";
 
-const Instructors = () => {
+const Classes = () => {
     const [menu, setMenu] = useState([])
     useEffect(()=>{
         fetch('http://localhost:5000/popular')
@@ -9,15 +9,15 @@ const Instructors = () => {
         .then(data => setMenu(data))
     },[])
     return (
-        <div className=" grid md:grid-cols-3 mb-36">
+        <div className=" grid md:grid-cols-3 mb-12 ">
             {
-                menu.map(item => <Ins
-                key={item._id}
-                item={item}
-                ></Ins>)
+                menu.map(item => <Class
+                 key={item._id}
+                 item={item}
+                ></Class>)
             }
         </div>
     );
 };
 
-export default Instructors;
+export default Classes;

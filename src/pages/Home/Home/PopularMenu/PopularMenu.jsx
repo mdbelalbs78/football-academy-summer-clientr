@@ -5,7 +5,7 @@ import Coach from "../Coach/Coach";
 const PopularMenu = () => {
     const [menu, setMenu] = useState([])
     useEffect(()=>{
-        fetch('popular.json')
+        fetch('http://localhost:5000/popular')
         .then(res => res.json())
         .then(data => setMenu(data))
     },[])
