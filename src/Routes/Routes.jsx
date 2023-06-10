@@ -10,7 +10,7 @@ import Secret from "../pages/Shared/Secret/Secret";
 import Instructors from "../pages/Instructors/Instructors";
 import Classes from "../pages/Classes/Classes";
 import Dashboard from "../Layout/Dashboard/Dashboard";
-import MyCart from "../pages/Dashboard/MyCart/MyCart";
+import StudentCart from "../pages/Dashboard/StudentCart/StudentCart";
 
 
   export const router = createBrowserRouter([
@@ -49,8 +49,8 @@ import MyCart from "../pages/Dashboard/MyCart/MyCart";
       element: <Dashboard></Dashboard>,
       children: [
         {
-          path: 'mycart',
-          element: <MyCart></MyCart>
+          path: 'studentcart',
+          element: <StudentCart></StudentCart>
         }
       ]
     }
