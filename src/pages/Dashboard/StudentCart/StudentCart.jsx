@@ -2,7 +2,7 @@
 const StudentCart = () => {
     return (
         <div>
-            <h2>Student cart</h2>
+            <h2>Student cart belal</h2>
         </div>
     );
 };

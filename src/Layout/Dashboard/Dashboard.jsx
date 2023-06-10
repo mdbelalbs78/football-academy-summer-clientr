@@ -1,20 +1,26 @@
-import { Outlet } from "react-router-dom";
+import { NavLink , Outlet } from "react-router-dom";
+import { FaHome, FaWallet } from 'react-icons/fa';
+
 
 const Dashboard = () => {
     return (
-    <div className="drawer lg:drawer-open">
+    <div className="drawer lg:drawer-open ">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col items-center justify-center">
             <Outlet></Outlet>
             <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
         
         </div> 
-        <div className="drawer-side">
+        <div className="drawer-side bg-slate-400">
             <label htmlFor="my-drawer-2" className="drawer-overlay"></label> 
-            <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
+            <ul className="menu p-4 w-80 h-full  text-base-content">
             {/* Sidebar content here */}
-            <li><a>Selected Classes</a></li>
-            <li><a>Enrolled Classes</a></li>
+            
+            <li><NavLink  to='/dashboard/studentcart'>Selected Classes</NavLink ></li>
+            <li><NavLink >Enrolled Classes</NavLink ></li>
+            <li><NavLink ><FaWallet></FaWallet>Payment</NavLink ></li>
+            <div className="divider"></div>
+            <li><NavLink  to='/'><FaHome></FaHome>Home</NavLink ></li>
        </ul>
   </div>
 </div>
