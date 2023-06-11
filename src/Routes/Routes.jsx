@@ -12,6 +12,8 @@ import Classes from "../pages/Classes/Classes";
 import Dashboard from "../Layout/Dashboard/Dashboard";
 import StudentCart from "../pages/Dashboard/StudentCart/StudentCart";
 import Error from "../pages/Shared/Error/Error";
+import ManageClasses from "../Layout/Dashboard/ManageClasses/ManageClasses";
+import ManageUsers from "../Layout/Dashboard/ManageUsers/ManageUsers";
 
 
   export const router = createBrowserRouter([
@@ -53,6 +55,14 @@ import Error from "../pages/Shared/Error/Error";
         {
           path: 'studentcart',
           element: <StudentCart></StudentCart>
+        },
+        {
+          path: 'classes',
+          element: <ManageClasses></ManageClasses>
+        },
+        {
+          path: 'users',
+          element: <ManageUsers></ManageUsers>
         }
       ]
     }

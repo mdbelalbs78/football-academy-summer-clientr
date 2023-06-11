@@ -1,8 +1,12 @@
 import { NavLink , Outlet } from "react-router-dom";
-import { FaHome, FaWallet } from 'react-icons/fa';
+import { FaHome} from 'react-icons/fa';
 
 
 const Dashboard = () => {
+
+    const isAdmin = true;
+
+
     return (
     <div className="drawer lg:drawer-open ">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -14,10 +18,21 @@ const Dashboard = () => {
         <div className="drawer-side bg-slate-400">
             <label htmlFor="my-drawer-2" className="drawer-overlay"></label> 
             <ul className="menu p-4 w-80 h-full  text-base-content">
+
+                {
+                    isAdmin ? <>
+                      <li><NavLink  to='/dashboard/classes'>Manage Classes</NavLink ></li>
+                      <li><NavLink  to='/dashboard/users'>Manage Users</NavLink ></li>
+                     </> : <>
+
+                      <li><NavLink  to='/dashboard/studentcart'>Selected Classes</NavLink ></li>
+                        <li><NavLink to='/dashboard/enroll'>Enrolled Classes</NavLink ></li>
+                        {/* <li><NavLink to='/dashboard/payment'><FaWallet></FaWallet>Payment</NavLink ></li> */}
+                    </>
+                }
             
-            <li><NavLink  to='/dashboard/studentcart'>Selected Classes</NavLink ></li>
-            <li><NavLink to='/dashboard/enroll'>Enrolled Classes</NavLink ></li>
-            <li><NavLink to='/dashboard/payment'><FaWallet></FaWallet>Payment</NavLink ></li>
+           
+
             <div className="divider"></div>
             <li><NavLink  to='/'><FaHome></FaHome>Home</NavLink ></li>
        </ul>
