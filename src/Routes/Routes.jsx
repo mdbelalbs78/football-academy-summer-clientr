@@ -11,12 +11,14 @@ import Instructors from "../pages/Instructors/Instructors";
 import Classes from "../pages/Classes/Classes";
 import Dashboard from "../Layout/Dashboard/Dashboard";
 import StudentCart from "../pages/Dashboard/StudentCart/StudentCart";
+import Error from "../pages/Shared/Error/Error";
 
 
   export const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
+      errorElement: <Error></Error>,
       children: [
         {
             path: '/',
@@ -46,7 +48,7 @@ import StudentCart from "../pages/Dashboard/StudentCart/StudentCart";
     },
     {
       path: 'dashboard',
-      element: <Dashboard></Dashboard>,
+      element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
       children: [
         {
           path: 'studentcart',

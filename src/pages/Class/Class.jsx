@@ -5,7 +5,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import useCart from "../../hooks/useCart";
 
 const Class = ({item}) => {
-    const {instructor,img,price,available_seats,_id} = item;
+    const {instructor,image,price,available_seats,_id,names} = item;
     const {user} = useContext(AuthContext)
     const navigate = useNavigate();
     const [,refetch] = useCart()
@@ -14,7 +14,7 @@ const Class = ({item}) => {
     const handleAddToCart = item => {
        console.log(item);
        if(user){
-        const classItem = {itemId: _id, instructor,price,img, email: user.email}
+        const classItem = {itemId: _id, instructor,price,image, email: user.email}
         fetch('http://localhost:5000/carts',{
             method: "POST",
             headers: {
@@ -54,10 +54,11 @@ const Class = ({item}) => {
     return (
         <div className="mt-28 ">
              <div className="card card-compact w-96 bg-base-100 shadow-xl">
-            <figure><img src={img} alt="Shoes" /></figure>
+            <figure><img src={image} alt="Shoes" /></figure>
             <div className="card-body">
-                <h2 className="card-title">{instructor}</h2>   
-                <p>{available_seats}</p>            
+                <h2 className="card-title">Instructor:{instructor}</h2> 
+                <h2>name:{names}</h2>  
+                <p>seats:{available_seats}</p>            
                  <p>${price}</p>
             </div>
             <button onClick={() => handleAddToCart(item)} className="btn btn-success">Select</button>

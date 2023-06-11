@@ -1,6 +1,7 @@
 import Banner from "../Banner/Banner";
 import { Helmet } from 'react-helmet-async';
 import PopularMenu from "./PopularMenu/PopularMenu";
+import ExtraSection from "../ExtraSection/ExtraSection";
 
 
 
@@ -14,6 +15,7 @@ const Home = () => {
       </Helmet>
             <Banner></Banner>
             <PopularMenu></PopularMenu>
+            <ExtraSection></ExtraSection>
         </div>
     );
 };
