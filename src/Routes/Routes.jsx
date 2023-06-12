@@ -14,6 +14,8 @@ import StudentCart from "../pages/Dashboard/StudentCart/StudentCart";
 import Error from "../pages/Shared/Error/Error";
 import ManageClasses from "../Layout/Dashboard/ManageClasses/ManageClasses";
 import ManageUsers from "../Layout/Dashboard/ManageUsers/ManageUsers";
+import AdItem from "../Layout/Dashboard/AdItem/AdItem";
+import AdminRoute from "./AdminRoute";
 
 
   export const router = createBrowserRouter([
@@ -63,6 +65,10 @@ import ManageUsers from "../Layout/Dashboard/ManageUsers/ManageUsers";
         {
           path: 'users',
           element: <ManageUsers></ManageUsers>
+        },
+        {
+          path: 'addItem',
+          element: <AdminRoute><AdItem></AdItem></AdminRoute>
         }
       ]
     }

@@ -1,10 +1,13 @@
 import { NavLink , Outlet } from "react-router-dom";
 import { FaHome} from 'react-icons/fa';
+import useAdmin from "../../hooks/useAdmin";
 
 
 const Dashboard = () => {
 
-    const isAdmin = true;
+    // const isAdmin = true;
+
+    const [isAdmin] = useAdmin()
 
 
     return (
@@ -23,6 +26,7 @@ const Dashboard = () => {
                     isAdmin ? <>
                       <li><NavLink  to='/dashboard/classes'>Manage Classes</NavLink ></li>
                       <li><NavLink  to='/dashboard/users'>Manage Users</NavLink ></li>
+                      <li><NavLink  to='/dashboard/addItem'>Manage Users</NavLink ></li>
                      </> : <>
 
                       <li><NavLink  to='/dashboard/studentcart'>Selected Classes</NavLink ></li>
