@@ -12,7 +12,8 @@
         "instructor_name": "Brian",
         "director" : "Football Performance Director",
         "email" : "jane@example.com",
-        "names" : "katli"
+        "names" : "katli",
+        "class" : 1
       },
       {
         "_id": "2",
@@ -26,7 +27,8 @@
         "instructor_name": "Edward",
         "director" : "Operations Director",
         "email" : "john@example.com",
-        "names" : "kobir"
+        "names" : "kobir",
+        "class" : 2
       },
       {
         "_id": "3",
@@ -40,7 +42,8 @@
         "instructor_name": "Leo",
         "director" : "Academy Director",
         "email" : "mary@example.com",
-        "names" : "Ashik"
+        "names" : "Ashik",
+        "class" : 3
       },
       {
         "_id": "4",
@@ -54,7 +57,8 @@
         "instructor_name": "Dimitri",
         "director" : "Assistant Coach",
         "email" : "john@example.com",
-        "names" : "Raju"
+        "names" : "Raju",
+        "class" : 4
       },
       {
         "_id": "5",
@@ -68,7 +72,8 @@
         "instructor_name": "Stevan",
         "director" : "Coach",
         "email" : "mary@example.com",
-        "names" : "Shaiks"
+        "names" : "Shaiks",
+        "class" : 5
       },
       {
         "_id": "6",
@@ -83,7 +88,8 @@
         "instructor_name": "Abraham",
         "director" : "Assistant Coach",
         "email" : "jane@example.com",
-        "names" : "Surbi"
+        "names" : "Surbi",
+        "class" : 6
         
       }
     

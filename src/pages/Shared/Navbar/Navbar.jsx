@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 import useCart from "../../../hooks/useCart";
+import logo from '../../../assets/logo.png'
 
 const Navbar = () => {
   const {user, logOut} = useContext(AuthContext)
@@ -40,6 +41,13 @@ const Navbar = () => {
       </ul>
     </div>
     <a className="btn btn-ghost normal-case text-xl">Football Academy</a>
+    <img  width="50"
+            height="50"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            fillRule="evenodd"
+            clip-rule="evenodd"
+            className="fill-current" src={logo} alt="" />
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">

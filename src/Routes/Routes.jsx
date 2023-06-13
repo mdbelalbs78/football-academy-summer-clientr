@@ -12,10 +12,11 @@ import Classes from "../pages/Classes/Classes";
 import Dashboard from "../Layout/Dashboard/Dashboard";
 import StudentCart from "../pages/Dashboard/StudentCart/StudentCart";
 import Error from "../pages/Shared/Error/Error";
-import ManageClasses from "../Layout/Dashboard/ManageClasses/ManageClasses";
 import ManageUsers from "../Layout/Dashboard/ManageUsers/ManageUsers";
 import AdItem from "../Layout/Dashboard/AdItem/AdItem";
 import AdminRoute from "./AdminRoute";
+import ManageClasses from "../Layout/Dashboard/ManageClasses/ManageClasses";
+
 
 
   export const router = createBrowserRouter([
@@ -58,18 +59,20 @@ import AdminRoute from "./AdminRoute";
           path: 'studentcart',
           element: <StudentCart></StudentCart>
         },
-        {
-          path: 'classes',
-          element: <ManageClasses></ManageClasses>
-        },
+    
         {
           path: 'users',
           element: <ManageUsers></ManageUsers>
         },
         {
+           path: 'classes',
+           element: <ManageClasses></ManageClasses>
+        },
+        {
           path: 'addItem',
           element: <AdminRoute><AdItem></AdItem></AdminRoute>
         }
+       
       ]
     }
   ]);
