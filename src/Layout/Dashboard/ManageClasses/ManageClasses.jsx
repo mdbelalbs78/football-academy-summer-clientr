@@ -1,5 +1,4 @@
-import {  FaUserShield } from "react-icons/fa";
-import Swal from "sweetalert2";
+
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
 
@@ -11,28 +10,7 @@ const ManageClasses = () => {
       return res.data;
     });
 
-    const handleInstrouctor = (user) => {
-      fetch(
-        `https://football-academy-server.vercel.app/users/instructor/${user._id}`,
-        {
-          method: "PATCH",
-        }
-      )
-        .then((res) => res.json())
-        .then((data) => {
-          if (data.modifiedCount) {
-            refetch();
-            Swal.fire({
-              position: "top-end",
-              icon: "success",
-              title: `${user.name} is an Instructor `,
-              showConfirmButton: false,
-              timer: 1500,
-            });
-          }
-        });
-    };
-  
+    console.log(users);
 
     return (
 
@@ -43,14 +21,12 @@ const ManageClasses = () => {
           <thead>
             <tr>
               <th>#</th>
-              <th>image</th>
               <th>Class Name</th>
               <th>Ins Name</th>
               <th>Ins Email</th>
               <th>Seats</th>
               <th>Status</th>
-              <th>Role</th>            
-               <th>Instructor</th>
+                
                <th>Approve</th>
                <th>Deny</th>
                <th>feedback</th>
@@ -61,29 +37,19 @@ const ManageClasses = () => {
             users.map((user, index) => (
               <tr key={user._id}>
                 <th>{index + 1}</th>
-                <td>{user.img}</td>
+                <td>{user.name}</td>
+                <td>{user.instructor}</td>
                 <td>{user.class}</td>
                 <td>{user.instructor_name}</td>
                 <td>{user.email}</td>
                 <td>{user.available_seats}</td>
                 <td>Approved</td>
-                <td>Role</td>
+           
                 
                 
 
                 {/* <td><button  className="bg-yellow-500 btn btn-ghost">in</button></td> */}
-                <td>
-                  {user.role === "instructor" ? (
-                    "instructor"
-                  ) : (
-                    <button
-                      onClick={() => handleInstrouctor(user)}
-                      className="btn btn-ghost  bg-yellow-500"
-                    >
-                      <FaUserShield></FaUserShield>
-                    </button>
-                  )}
-                </td>
+                
                 <td> 
                   <button className="btn btn-ghost  bg-green-400">  Approve</button>
                 </td>

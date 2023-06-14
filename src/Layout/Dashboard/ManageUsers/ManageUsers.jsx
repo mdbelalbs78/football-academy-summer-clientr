@@ -22,12 +22,9 @@ const ManageUsers = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(
-          `https://football-academy-server.vercel.app/users/admin/${user._id}`,
-          {
-            method: "DELETE",
-          }
-        )
+        fetch(`http://localhost:5000/users/admin/${user._id}`, {
+          method: "DELETE",
+        })
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {
@@ -40,12 +37,9 @@ const ManageUsers = () => {
   };
 
   const handleMakeAdmin = (user) => {
-    fetch(
-      `https://football-academy-server.vercel.app/users/admin/${user._id}`,
-      {
-        method: "PATCH",
-      }
-    )
+    fetch(`http://localhost:5000/users/admin/${user._id}`, {
+      method: "PATCH",
+    })
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount) {
@@ -61,12 +55,9 @@ const ManageUsers = () => {
       });
   };
   const handleInstrouctor = (user) => {
-    fetch(
-      `https://football-academy-server.vercel.app/users/instructor/${user._id}`,
-      {
-        method: "PATCH",
-      }
-    )
+    fetch(`http://localhost:5000/users/instructor/${user._id}`, {
+      method: "PATCH",
+    })
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount) {
@@ -99,17 +90,18 @@ const ManageUsers = () => {
             </tr>
           </thead>
           <tbody>
-            {
-            users.map((user, index) => (
+            {users.map((user, index) => (
               <tr key={user._id}>
                 <th>{index + 1}</th>
                 <td>{user.name}</td>
                 <td>{user.email}</td>
-                <td>Role</td>
+                <td>{user.role || "User"}</td>
                 {/* <td><button  className="bg-yellow-500 btn btn-ghost">in</button></td> */}
                 <td>
                   {user.role === "instructor" ? (
-                    "instructor"
+                    <button disabled className="btn btn-ghost  bg-yellow-500">
+                      <FaUserShield></FaUserShield>
+                    </button>
                   ) : (
                     <button
                       onClick={() => handleInstrouctor(user)}
@@ -121,7 +113,9 @@ const ManageUsers = () => {
                 </td>
                 <td>
                   {user.role === "admin" ? (
-                    "admin"
+                    <button disabled className="btn btn-ghost  bg-yellow-500">
+                      <FaUserShield></FaUserShield>
+                    </button>
                   ) : (
                     <button
                       onClick={() => handleMakeAdmin(user)}

@@ -3,19 +3,28 @@ import PopularItem from "../../../Shared/PopularItem/PopularItem";
 import Coach from "../Coach/Coach";
 
 const PopularMenu = () => {
+  const [classData, setClassData] = useState([]);
   const [menu, setMenu] = useState([]);
   useEffect(() => {
-    fetch("https://football-academy-server.vercel.app/popular")
+    fetch("http://localhost:5000/instructor")
       .then((res) => res.json())
       .then((data) => setMenu(data));
   }, []);
+
+  useEffect(()=>{
+    fetch("http://localhost:5000/class")
+      .then((res) => res.json())
+      .then((data) => setClassData(data));
+  },[])
+  console.log(classData);
+
   return (
     <div>
       <h2 className="text-center mt-5 p-5 text-3xl mb-2 font-semibold">
         Popular Classes Section
       </h2>
       <div className=" grid md:grid-cols-3 mb-12">
-        {menu.map((item) => (
+        {classData.slice(0, 6).map((item) => (
           <PopularItem key={item._id} item={item}></PopularItem>
         ))}
       </div>
@@ -25,7 +34,7 @@ const PopularMenu = () => {
           Popular Instructors Section
         </h2>
         <div className=" grid md:grid-cols-3 mb-12">
-          {menu.map((item) => (
+          {menu.slice(0,6).map((item) => (
             <Coach key={item._id} item={item}></Coach>
           ))}
         </div>

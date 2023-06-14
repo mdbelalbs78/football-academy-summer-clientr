@@ -1,6 +1,7 @@
 
 const PopularItem = ({item}) => {
-    const {name,image,students} = item;
+    const {instructor, image, price, available_seats,name} = item;
+    console.log(item);
     return (
             
            <div >          
@@ -9,7 +10,9 @@ const PopularItem = ({item}) => {
             <figure><img src={image} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title">Name:{name}</h2>
-                 <p>{students}</p>
+                 <p>{available_seats}</p>
+                 <p>Price:{price}</p>
+                 <h2>instructor:{instructor}</h2>
             </div>
          </div>
         </div>

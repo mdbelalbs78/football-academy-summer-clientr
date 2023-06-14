@@ -1,0 +1,67 @@
+ [
+      {
+        "image": "https://example.com/image1.jpg",
+        "name": "Judo Class",
+        "instructor": "Sensei Hiroshi",
+        "available_seats": 20,
+        "price": "$80/month"
+      },
+      {
+        "image": "https://example.com/image2.jpg",
+        "name": "Karate Class",
+        "instructor": "Sensei Akiko",
+        "available_seats": 15,
+        "price": "$100/month"
+      },
+      {
+        "image": "https://example.com/image3.jpg",
+        "name": "Brazilian Jiu-Jitsu Class",
+        "instructor": "Sensei Takeshi",
+        "available_seats": 10,
+        "price": "$120/month"
+      },
+      {
+        "image": "https://example.com/image4.jpg",
+        "name": "Muay Thai Class",
+        "instructor": "Sensei Emi",
+        "available_seats": 12,
+        "price": "$150/month"
+      },
+      {
+        "image": "https://example.com/image5.jpg",
+        "name": "Taekwondo Class",
+        "instructor": "Sensei Kaito",
+        "available_seats": 18,
+        "price": "$90/month"
+      },
+      {
+        "image": "https://example.com/image6.jpg",
+        "name": "Wing Chun Class",
+        "instructor": "Sensei Yumi",
+        "available_seats": 15,
+        "price": "$110/month"
+      },
+      {
+        "image": "https://example.com/image7.jpg",
+        "name": "Krav Maga Class",
+        "instructor": "Sensei Ryu",
+        "available_seats": 10,
+        "price": "$130/month"
+      },
+      {
+        "image": "https://example.com/image8.jpg",
+        "name": "Aikido Class",
+        "instructor": "Sensei Mei",
+        "available_seats": 12,
+        "price": "$100/month"
+      },
+      {
+        "image": "https://example.com/image9.jpg",
+        "name": "Capoeira Class",
+        "instructor": "Sensei Kazuki",
+        "available_seats": 8,
+        "price": "$200/month"
+      }
+    ]
+  
+  
