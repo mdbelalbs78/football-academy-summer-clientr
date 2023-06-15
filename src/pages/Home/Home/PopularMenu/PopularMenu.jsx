@@ -12,7 +12,7 @@ const PopularMenu = () => {
   }, []);
 
   useEffect(()=>{
-    fetch("http://localhost:5000/class")
+    fetch("http://localhost:5000/allclass")
       .then((res) => res.json())
       .then((data) => setClassData(data));
   },[])

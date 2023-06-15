@@ -16,6 +16,8 @@ import ManageUsers from "../Layout/Dashboard/ManageUsers/ManageUsers";
 import AdItem from "../Layout/Dashboard/AdItem/AdItem";
 import AdminRoute from "./AdminRoute";
 import ManageClasses from "../Layout/Dashboard/ManageClasses/ManageClasses";
+import AddClass from "../Layout/Dashboard/AddClass/AddClass";
+import MyClass from "../Layout/Dashboard/MyClass/MyClass";
 
 
 
@@ -68,6 +70,14 @@ import ManageClasses from "../Layout/Dashboard/ManageClasses/ManageClasses";
            path: 'classes',
            element: <ManageClasses></ManageClasses>
         },
+        {
+           path: 'addclass',
+           element: <AddClass></AddClass>
+        },
+       {
+         path: 'myclass',
+         element: <MyClass></MyClass>
+       },
         {
           path: 'addItem',
           element: <AdminRoute><AdItem></AdItem></AdminRoute>

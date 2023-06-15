@@ -1,12 +1,20 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 import useCart from "../../../hooks/useCart";
 import logo from '../../../assets/logo.png'
+import useConditionalChangeTheme from "../../../hooks/useConditionalChangeTheme";
 
 const Navbar = () => {
   const {user, logOut} = useContext(AuthContext)
   const [cart] = useCart();
+
+  const [darkTheme, setDarkTheme] = useState(false);
+  const toggleTheme = () => {
+    setDarkTheme(!darkTheme);
+  };
+
+  useConditionalChangeTheme(darkTheme ? 'dark' : 'light');
 
   const handleLogOut = () => {
        logOut()
@@ -55,7 +63,8 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+    {/* <a onClick={toggleTheme} className="btn">Button</a> */}
+    <button onClick={toggleTheme}>toggle</button>
   </div>
 </div>
         </div>

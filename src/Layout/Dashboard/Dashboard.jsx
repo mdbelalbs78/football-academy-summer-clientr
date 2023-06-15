@@ -1,14 +1,17 @@
 import { NavLink , Outlet } from "react-router-dom";
 import { FaHome} from 'react-icons/fa';
 import useAdmin from "../../hooks/useAdmin";
+import useInstructor from "../../hooks/userInstructor";
+// import useAdmin from "../../hooks/useAdmin";
+
 
 
 const Dashboard = () => {
 
-    // const isAdmin = true;
-
+   
+   
     const [isAdmin] = useAdmin()
-
+    const [isInstructor] = useInstructor()
 
     return (
     <div className="drawer lg:drawer-open ">
@@ -26,17 +29,21 @@ const Dashboard = () => {
                     isAdmin ? <>
                       <li><NavLink  to='/dashboard/classes'>Manage Classes</NavLink ></li>
                       <li><NavLink  to='/dashboard/users'>Manage Users</NavLink ></li>
-                      <li><NavLink  to='/dashboard/addItem'>Classes Add</NavLink ></li>
-                      
-                     </> : <>
-
+                                        
+                     </> : isInstructor ? 
+                        <>                    
+                        
+                          <li><NavLink  to='/dashboard/addclass'>Classes Add</NavLink ></li>
+                          <li><NavLink  to='/dashboard/myclass'>My Classes</NavLink ></li>
+                       
+                      </>    
+                      :               
+                      <>
                       <li><NavLink  to='/dashboard/studentcart'>Selected Classes</NavLink ></li>
-                        <li><NavLink to='/dashboard/enroll'>Enrolled Classes</NavLink ></li>
-                        {/* <li><NavLink to='/dashboard/payment'><FaWallet></FaWallet>Payment</NavLink ></li> */}
-                    </>
-                }
-            
-           
+                          <li><NavLink to='/dashboard/enroll'>Enrolled Classes</NavLink ></li>
+                      </>}
+                
+               
 
             <div className="divider"></div>
             <li><NavLink  to='/'><FaHome></FaHome>Home</NavLink ></li>

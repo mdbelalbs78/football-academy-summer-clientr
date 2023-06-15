@@ -66,7 +66,7 @@ const Class = ({ item }) => {
           <img src={image} alt="Shoes" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">Instructor:{instructor}</h2>
+          <h2 className="card-title">Instructor:{item.instructor}</h2>
           <h2>name:{name}</h2>
           <p>seats:{available_seats}</p>
           <p>${price}</p>

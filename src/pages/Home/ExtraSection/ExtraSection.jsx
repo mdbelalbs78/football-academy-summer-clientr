@@ -1,3 +1,4 @@
+import { Fade } from "react-awesome-reveal";
 import img1 from "../../../assets/g1.avif";
 import img2 from "../../../assets/g2.avif";
 import img3 from "../../../assets/g3.avif";
@@ -6,7 +7,8 @@ import img5 from "../../../assets/g5.avif";
 const ExtraSection = () => {
     return (
     <div>
-    <div className="mt-5" >
+       <Fade direction='left'>
+       <div className="mt-5" >
       <h2 className="text-5xl font-bold  text-center p-3">Our Gallery</h2>
       
       <section className="py-4 dark:bg-gray-800 dark:text-gray-50">
@@ -46,6 +48,8 @@ const ExtraSection = () => {
         </div>
       </section>
     </div>
+        </Fade>
+    
         </div>
     );
 };

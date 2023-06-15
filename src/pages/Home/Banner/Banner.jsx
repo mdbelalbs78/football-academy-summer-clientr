@@ -1,3 +1,4 @@
+import { Fade } from 'react-awesome-reveal';
 import img1 from '../../../assets/fo1.jpg';
 import img2 from '../../../assets/fo2.jpg';
 import img3 from '../../../assets/fo3.jpg';
@@ -12,7 +13,8 @@ const Banner = () => {
             className="w-full rounded-xl"
           />
           <div className="absolute rounded-xl flex items-center h-full left-0  bottom-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0) 100%)]">
-           <div className='text-white space-y-7 w-1/2 pl-12'>
+          <Fade direction='left'>  
+          <div  className='text-white space-y-7 w-1/2 pl-12'>
               <h2 className='text-6xl text-white font-bold  '>WELCOME TO BEST FOOTBALL ACADEMY</h2>
               <p>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
               <div >
@@ -20,6 +22,9 @@ const Banner = () => {
               <button className="btn btn-outline btn-secondary">Latest Project</button>
               </div>
            </div>
+       </Fade>
+      
+           
           </div>
           <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0">
             <a href="#slide4" className="btn btn-circle mr-5">
