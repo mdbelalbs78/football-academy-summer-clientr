@@ -40,7 +40,7 @@ const Dashboard = () => {
                       :               
                       <>
                       <li><NavLink  to='/dashboard/studentcart'>Selected Classes</NavLink ></li>
-                          <li><NavLink to='/dashboard/enroll'>Enrolled Classes</NavLink ></li>
+                          {/* <li><NavLink to='/dashboard/enroll'>Enrolled Classes</NavLink ></li> */}
                       </>}
                 
                

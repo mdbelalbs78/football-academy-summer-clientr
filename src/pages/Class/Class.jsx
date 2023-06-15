@@ -5,7 +5,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import useCart from "../../hooks/useCart";
 
 const Class = ({ item }) => {
-  const { instructor, image, price, available_seats,name, _id } = item;
+  const { instructor, image, price, available_seats, name, _id } = item;
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
   const [, refetch] = useCart();
@@ -24,7 +24,7 @@ const Class = ({ item }) => {
         image,
         email: user.email,
       };
-      fetch("http://localhost:5000/selectedClassData", {
+      fetch("https://football-academy-server.vercel.app/selectedClassData", {
         method: "POST",
         headers: {
           "content-type": "application/json",

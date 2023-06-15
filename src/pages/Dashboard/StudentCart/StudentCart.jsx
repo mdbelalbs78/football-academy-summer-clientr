@@ -19,9 +19,12 @@ const StudentCart = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/classes/${item._id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://football-academy-server.vercel.app/classes/${item._id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {
@@ -54,7 +57,7 @@ const StudentCart = () => {
               {cart.map((item, index) => (
                 <tr key={item._id}>
                   <td>{index + 1}</td>
-                  <td>{item.instructor}</td>
+                  <td>{item.className}</td>
                   <td className="text-end">${item.price}</td>
                   <td>
                     <button className="btn btn-ghost  bg-yellow-500">

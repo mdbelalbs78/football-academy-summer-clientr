@@ -4,7 +4,7 @@ import Ins from "../Ins/Ins";
 const Instructors = () => {
   const [menu, setMenu] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/instructor")
+    fetch("https://football-academy-server.vercel.app/instructor")
       .then((res) => res.json())
       .then((data) => setMenu(data));
   }, []);
